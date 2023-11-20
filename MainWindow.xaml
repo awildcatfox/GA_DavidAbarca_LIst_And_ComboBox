@@ -1,12 +1,79 @@
-﻿<Window x:Class="GA_DavidAbarca_LIst_And_ComboBox.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GA_DavidAbarca_LIst_And_ComboBox"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+﻿<Window
+    x:Class="GA_DavidAbarca_LIst_And_ComboBox.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:GA_DavidAbarca_LIst_And_ComboBox"
+    mc:Ignorable="d"
+    Title="MainWindow"
+    Height="450"
+    Width="800">
+    <Grid
+        Margin="0,0,0,-6">
+        <ComboBox
+            x:Name="cmbFirstName"
+            HorizontalAlignment="Left"
+            Margin="138,95,0,0"
+            VerticalAlignment="Top"
+            Width="120" />
+        <ListBox
+            x:Name="lbLastNames"
+            d:ItemsSource="{d:SampleData ItemCount=5}"
+            Margin="322,78,251,271" />
+        <Button
+            x:Name="btnDisplayName"
+            Content="Display Full Name"
+            HorizontalAlignment="Left"
+            Margin="158,186,0,0"
+            VerticalAlignment="Top"
+            Click="btnDisplayName_Click" />
+        <Label
+            Content="First Name"
+            HorizontalAlignment="Left"
+            Margin="174,230,0,0"
+            VerticalAlignment="Top" />
+        <Label
+            Content="Last Name"
+            HorizontalAlignment="Left"
+            Margin="458,230,0,0"
+            VerticalAlignment="Top" />
+        <TextBox
+            x:Name="txtFirstName"
+            HorizontalAlignment="Left"
+            Margin="158,261,0,0"
+            TextWrapping="Wrap"
+            
+            VerticalAlignment="Top"
+            Width="120" />
+        <TextBox
+            x:Name="txtLastName"
+            HorizontalAlignment="Left"
+            Margin="431,256,0,0"
+            TextWrapping="Wrap"
+            
+            VerticalAlignment="Top"
+            Width="120" />
+        <Button
+            x:Name="btnAddNames"
+            Content="AddNames"
+            HorizontalAlignment="Left"
+            Margin="336,299,0,0"
+            VerticalAlignment="Top"
+            Click="btnAddNames_Click" />
+
+        <Button
+            x:Name="btnRemoveStudentAtIndex"
+            Content="Remove Students At Index"
+            Click="btnRemoveStudentAtIndex_Click"
+            Margin="254,342,320,35" />
+        <ListBox
+            x:Name="lbLastNames1"
+            d:ItemsSource="{d:SampleData ItemCount=5}"
+            Margin="535,302,57,41"
+            SelectionChanged="lbLastNames1_SelectionChanged" />
+
+
 
     </Grid>
 </Window>
